@@ -25,12 +25,7 @@
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
         }
-        body {
-            background-color: var(--fondo);
-            color: var(--texto);
-            line-height: 1.65;
-        }
-        /* Encabezado Principal */
+        body { background-color: var(--fondo); color: var(--texto); line-height: 1.65; }
         header {
             background-color: var(--verde-oscuro);
             background-image: linear-gradient(135deg, var(--verde-oscuro) 0%, var(--verde-medio) 100%);
@@ -50,18 +45,8 @@
             margin-bottom: 1rem;
             background-color: rgba(0,0,0,0.15);
         }
-        header h1 {
-            font-size: 3rem;
-            letter-spacing: 3px;
-            margin-bottom: 0.5rem;
-            font-weight: 800;
-        }
-        header p {
-            font-size: 1.2rem;
-            max-width: 750px;
-            margin: 0 auto 1.5rem auto;
-            color: #e0ece6;
-        }
+        header h1 { font-size: 3rem; letter-spacing: 3px; margin-bottom: 0.5rem; font-weight: 800; }
+        header p { font-size: 1.2rem; max-width: 750px; margin: 0 auto 1.5rem auto; color: #e0ece6; }
         .badge {
             display: inline-block;
             background-color: var(--tierra);
@@ -72,7 +57,6 @@
             font-weight: 600;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-        /* Barra de navegación */
         nav {
             background-color: var(--blanco);
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -90,37 +74,13 @@
             font-weight: 600;
             font-size: 0.95rem;
             border-bottom: 3px solid transparent;
-            transition: all 0.2s ease;
         }
-        nav a:hover {
-            background-color: var(--verde-suave);
-            border-bottom: 3px solid var(--tierra);
-        }
-        /* Contenedor y Secciones */
-        .container {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-        section {
-            margin-bottom: 4rem;
-        }
-        .section-header {
-            margin-bottom: 2rem;
-        }
-        h2 {
-            color: var(--verde-oscuro);
-            font-size: 1.9rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .divider {
-            width: 70px;
-            height: 4px;
-            background-color: var(--tierra);
-            border-radius: 2px;
-        }
-        /* Quiénes Somos */
+        nav a:hover { background-color: var(--verde-suave); border-bottom: 3px solid var(--tierra); }
+        .container { max-width: 1050px; margin: 0 auto; padding: 3rem 1.5rem; }
+        section { margin-bottom: 4rem; }
+        .section-header { margin-bottom: 2rem; }
+        h2 { color: var(--verde-oscuro); font-size: 1.9rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .divider { width: 70px; height: 4px; background-color: var(--tierra); border-radius: 2px; }
         .intro-text {
             font-size: 1.08rem;
             color: var(--texto-gris);
@@ -131,42 +91,22 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             margin-bottom: 1.5rem;
         }
-        .about-grid {
+        .about-grid, .services-grid, .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
-        .card {
+        .card, .service-item {
             background: var(--blanco);
             padding: 1.8rem;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--verde-oscuro);
             break-inside: avoid;
         }
-        .card h3 {
-            color: var(--verde-oscuro);
-            margin-bottom: 0.7rem;
-            font-size: 1.2rem;
-        }
-        .card p {
-            color: var(--texto-gris);
-            font-size: 0.98rem;
-        }
-        /* Líneas de Acción */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        .service-item {
-            background: var(--blanco);
-            padding: 1.8rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--tierra);
-            break-inside: avoid;
-        }
+        .card { border-top: 4px solid var(--verde-oscuro); }
+        .service-item { border-left: 4px solid var(--tierra); }
+        .card h3, .service-item h3 { color: var(--verde-oscuro); margin-bottom: 0.7rem; font-size: 1.15rem; }
+        .card p, .service-item p { color: var(--texto-gris); font-size: 0.96rem; }
         .service-icon {
             display: inline-block;
             background-color: var(--tierra-claro);
@@ -174,22 +114,6 @@
             border-radius: 8px;
             font-size: 1.5rem;
             margin-bottom: 0.8rem;
-        }
-        .service-item h3 {
-            color: var(--verde-oscuro);
-            margin-bottom: 0.6rem;
-            font-size: 1.15rem;
-        }
-        .service-item p {
-            color: var(--texto-gris);
-            font-size: 0.95rem;
-        }
-        /* Galería */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
         }
         .gallery-placeholder {
             background-color: var(--blanco);
@@ -205,11 +129,7 @@
             color: var(--texto-gris);
             break-inside: avoid;
         }
-        .gallery-placeholder span {
-            font-size: 2.5rem;
-            margin-bottom: 0.6rem;
-        }
-        /* Tabla Junta Directiva */
+        .gallery-placeholder span { font-size: 2.5rem; margin-bottom: 0.6rem; }
         .team-table {
             width: 100%;
             border-collapse: collapse;
@@ -219,101 +139,36 @@
             overflow: hidden;
             break-inside: avoid;
         }
-        .team-table th, .team-table td {
-            padding: 1.1rem 1.5rem;
-            text-align: left;
-            border-bottom: 1px solid #e6ece9;
-        }
-        .team-table th {
-            background-color: var(--verde-oscuro);
-            color: var(--blanco);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-        }
-        .team-table tr:nth-child(even) {
-            background-color: #f9fbfa;
-        }
-        /* Contacto */
+        .team-table th, .team-table td { padding: 1.1rem 1.5rem; text-align: left; border-bottom: 1px solid #e6ece9; }
+        .team-table th { background-color: var(--verde-oscuro); color: var(--blanco); font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; }
+        .team-table tr:nth-child(even) { background-color: #f9fbfa; }
         .contact-box {
             background-color: var(--verde-oscuro);
             color: var(--blanco);
             padding: 3rem 2rem;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(20, 54, 39, 0.2);
             break-inside: avoid;
         }
-        .contact-box h3 {
-            font-size: 1.6rem;
-            margin-bottom: 0.8rem;
-        }
-        .contact-box p {
-            color: #d8e6df;
-            max-width: 650px;
-            margin: 0 auto 0.6rem auto;
-        }
-        .contact-details {
-            background-color: rgba(255,255,255,0.1);
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            margin: 1.2rem 0;
-        }
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1.2rem;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.85rem 1.8rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            color: var(--blanco);
-            transition: transform 0.2s ease;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-        .btn-email {
-            background-color: var(--tierra);
-        }
-        .btn-fb {
-            background-color: var(--facebook);
-        }
-        footer {
-            background-color: #0e261b;
-            color: #a3b8ae;
-            text-align: center;
-            padding: 1.8rem;
-            font-size: 0.9rem;
-        }
-        /* Ajustes para impresión / PDF */
-        @media print {
-            nav { display: none; }
-            body { background-color: var(--blanco); }
-            .container { padding: 1.5rem 0; }
-        }
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.1rem; }
-            nav a { padding: 0.8rem; font-size: 0.85rem; }
-        }
+        .contact-box h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+        .contact-box p { color: #d8e6df; max-width: 650px; margin: 0 auto 0.6rem auto; }
+        .contact-details { background-color: rgba(255,255,255,0.1); display: inline-block; padding: 1rem 2rem; border-radius: 8px; margin: 1.2rem 0; }
+        .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.2rem; }
+        .btn { display: inline-block; padding: 0.85rem 1.8rem; border-radius: 6px; text-decoration: none; font-weight: 600; color: var(--blanco); }
+        .btn-email { background-color: var(--tierra); }
+        .btn-fb { background-color: var(--facebook); }
+        footer { background-color: #0e261b; color: #a3b8ae; text-align: center; padding: 1.8rem; font-size: 0.9rem; }
+        @media print { nav { display: none; } body { background-color: var(--blanco); } .container { padding: 1.5rem 0; } }
+        @media (max-width: 600px) { header h1 { font-size: 2.1rem; } nav a { padding: 0.8rem; font-size: 0.85rem; } }
     </style>
 </head>
 <body>
-
     <header>
         <div class="sigla-box">Portafolio Institucional</div>
         <h1>ASOCATIFER</h1>
         <p>Asociación Campesina Integral Agroproductiva Tierra Fértil</p>
         <span class="badge">📍 Corregimiento de Palmira • Tierralta, Córdoba</span>
     </header>
-
     <nav>
         <a href="#nosotros">Quiénes Somos</a>
         <a href="#lineas">Líneas de Acción</a>
@@ -321,7 +176,155 @@
         <a href="#directiva">Junta Directiva</a>
         <a href="#contacto">Contacto</a>
     </nav>
-
     <div class="container">
-        
-        <section id="nosotros">
+
+                <section id="nosotros">
+            <div class="section-header">
+                <h2>Quiénes Somos</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="intro-text">
+                Somos una entidad privada sin ánimo de lucro, de primer grado y de utilidad común, constituida en abril de 2026 en el corregimiento de Palmira, municipio de Tierralta (Córdoba). Trabajamos de manera autónoma e independiente para impulsar el desarrollo rural sostenible, la seguridad alimentaria y el bienestar integral de las familias campesinas y comunidades vulnerables.
+            </div>
+            <div class="about-grid">
+                <div class="card">
+                    <h3>⚖️ Naturaleza Jurídica</h3>
+                    <p>Regida por la Ley 2219 de 2022 y las normas civiles colombianas vigentes, con capacidad legal para gestionar proyectos, contratos y convenios a nivel municipal, departamental, nacional e internacional.</p>
+                </div>
+                <div class="card">
+                    <h3>🗺️ Impacto Territorial</h3>
+                    <p>Nuestro domicilio principal se encuentra en Palmira (Tierralta), con proyección para articular iniciativas productivas y sociales en todo el departamento de Córdoba.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lineas">
+            <div class="section-header">
+                <h2>Portafolio de Líneas y Proyectos</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">🌱</div>
+                    <h3>Producción Agropecuaria</h3>
+                    <p>Fomento de agricultura sostenible, seguridad alimentaria, sistemas de riego, comercialización colectiva y acceso directo a mercados regionales sin intermediarios.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🐔</div>
+                    <h3>Avicultura, Porcicultura y Piscicultura</h3>
+                    <p>Cría sostenible de aves, cerdos y peces (tilapia, mojarra, trucha) bajo buenas prácticas sanitarias, mejoramiento genético y aprovechamiento de subproductos orgánicos.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🌍</div>
+                    <h3>Gestión Ambiental</h3>
+                    <p>Agroecología, reforestación, protección de cuencas hidrográficas, manejo de residuos, compostaje y promoción de energías limpias como la solar y el biogás.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🤝</div>
+                    <h3>Desarrollo Social y Comunitario</h3>
+                    <p>Programas integrales para primera infancia, juventud, mujeres cabeza de hogar, adulto mayor, víctimas del conflicto y mejoramiento de vivienda rural.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">💻</div>
+                    <h3>Innovación y Gestión de Calidad</h3>
+                    <p>Asesoría en herramientas digitales, innovación educativa, fortalecimiento organizacional e implementación de sistemas integrados de gestión de calidad.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Infraestructura Rural</h3>
+                    <p>Diseño, planificación y ejecución de obras de saneamiento básico, almacenamiento, adecuación de granjas, estanques y hábitat comunitario.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <div class="section-header">
+                <h2>Galería de Actividades y Proyectos</h2>
+                <div class="divider"></div>
+            </div>
+            <p style="color: var(--texto-gris); margin-bottom: 1.5rem;">Como organización de reciente constitución, estamos consolidando nuestras primeras iniciativas en territorio. Próximamente compartiremos aquí el registro fotográfico de nuestras jornadas comunitarias y productivas.</p>
+            <div class="gallery-grid">
+                <div class="gallery-placeholder">
+                    <span>🌾</span>
+                    <strong>Proyectos Agroproductivos</strong>
+                    <small>Espacio reservado para evidencias de cultivos y granjas</small>
+                </div>
+                <div class="gallery-placeholder">
+                    <span>🤝</span>
+                    <strong>Trabajo Comunitario</strong>
+                    <small>Espacio reservado para asambleas y talleres locales</small>
+                </div>
+                <div class="gallery-placeholder">
+                    <span>🌿</span>
+                    <strong>Gestión Ambiental</strong>
+                    <small>Espacio reservado para jornadas de reforestación y sostenibilidad</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="directiva">
+            <div class="section-header">
+                <h2>Junta Directiva y Control</h2>
+                <div class="divider"></div>
+            </div>
+            <table class="team-table">
+                <thead>
+                    <tr>
+                        <th>Cargo</th>
+                        <th>Dignatario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Presidenta y Representante Legal</strong></td>
+                        <td>Martha Cecilia Méndez Cervantes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vicepresidente</strong></td>
+                        <td>Katty Liliana Otero Espitia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Secretaria</strong></td>
+                        <td>Dulayme Esther Garcés Pacheco</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tesorera</strong></td>
+                        <td>Mary Sofía Otero Espitia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vocal 1</strong></td>
+                        <td>Clara Celestina Espitia Revuelta</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vocal 2</strong></td>
+                        <td><em>Por definir</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fiscal (Órgano de Control)</strong></td>
+                        <td>Pedro Miguel Villadiego Berrocal</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contacto">
+            <div class="contact-box">
+                <h3>Contacto y Alianzas Estratégicas</h3>
+                <p>Estamos abiertos a convenios y articulación de proyectos con entidades públicas, privadas y de cooperación nacional o internacional.</p>
+                <div class="contact-details">
+                    <p><strong>📍 Ubicación:</strong> Corregimiento de Palmira, Tierralta - Córdoba, Colombia</p>
+                    <p style="margin-bottom: 0;"><strong>✉️ Correo:</strong> asocatifer.tierralta@gmail.com</p>
+                </div>
+                <div class="btn-group">
+                    <a href="mailto:asocatifer.tierralta@gmail.com" class="btn btn-email">Enviar Correo Electrónico</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="btn btn-fb">Visitar Página de Facebook</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ASOCATIFER - Asociación Campesina Integral Agroproductiva Tierra Fértil. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
